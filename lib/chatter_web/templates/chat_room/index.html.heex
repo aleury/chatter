@@ -1,7 +1,11 @@
 <h1 class="title">Welcome to Chatter!</h1>
 
 <ul>
-    <%= for room <- @chat_rooms do %>
-        <li data-role="room"><%= room.name %></li>
-    <% end %>
+  <%= for room <- @chat_rooms do %>
+      <li data-role="room"><%= room.name %></li>
+  <% end %>
 </ul>
+
+<div>
+  <%= link "New chat room", to: Routes.chat_room_path(@conn, :new) %>
+</div>
